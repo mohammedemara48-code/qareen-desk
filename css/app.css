@@ -1,0 +1,115 @@
+:root {
+  --bg: #0b0d10;
+  --panel: #12171f;
+  --line: #243044;
+  --text: #e8eef7;
+  --muted: #8b9bb4;
+  --accent: #3d7ea6;
+  --danger: #a63d4a;
+  --warn: #a67a3d;
+  --glow: rgba(61, 126, 166, 0.25);
+  font-family: "Segoe UI", Tahoma, "Noto Sans Arabic", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); }
+body {
+  background-image:
+    radial-gradient(ellipse at top, #152033 0%, transparent 55%),
+    linear-gradient(180deg, #0b0d10, #080a0c);
+}
+
+.hidden { display: none !important; }
+
+.topbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--line);
+  background: rgba(18, 23, 31, 0.92); backdrop-filter: blur(8px);
+  position: sticky; top: 0; z-index: 10;
+}
+.brand { display: flex; gap: 0.75rem; align-items: center; }
+.brand small { display: block; color: var(--muted); font-size: 0.75rem; }
+.seal {
+  width: 2.2rem; height: 2.2rem; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 1px solid var(--accent); color: var(--accent);
+  box-shadow: 0 0 16px var(--glow);
+}
+.meta { display: flex; gap: 1rem; color: var(--muted); font-size: 0.85rem; }
+
+.layout {
+  display: grid; grid-template-columns: minmax(220px, 280px) 1fr;
+  gap: 1rem; padding: 1rem; max-width: 1100px; margin: 0 auto;
+}
+@media (max-width: 800px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+.queue, .panel {
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: 12px; padding: 1rem 1.1rem;
+}
+.queue h2 { margin: 0 0 0.75rem; font-size: 1rem; color: var(--muted); font-weight: 600; }
+.queue ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+.queue li button {
+  width: 100%; text-align: right; background: #0e131a; color: var(--text);
+  border: 1px solid var(--line); border-radius: 8px; padding: 0.65rem 0.75rem;
+  cursor: pointer;
+}
+.queue li button.active { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.queue li button.done { opacity: 0.45; }
+.hint { color: var(--muted); font-size: 0.8rem; margin-top: 1rem; }
+
+.warning {
+  display: inline-block; padding: 0.25rem 0.55rem; border-radius: 999px;
+  background: rgba(166, 61, 74, 0.15); color: #e8a0a8; font-size: 0.75rem;
+}
+h1 { margin: 0.75rem 0 0.5rem; font-size: 1.6rem; }
+.primary, .ghost, .act {
+  border-radius: 8px; border: 1px solid var(--line); padding: 0.7rem 1rem;
+  cursor: pointer; font: inherit; margin-top: 0.5rem; margin-left: 0.35rem;
+}
+.primary { background: var(--accent); color: #fff; border-color: transparent; }
+.ghost { background: transparent; color: var(--text); }
+.act { background: #0e131a; color: var(--text); }
+.act.danger { border-color: var(--danger); color: #f0b4bb; }
+.act.warn { border-color: var(--warn); color: #f0d4a8; }
+
+.case-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.tag {
+  font-size: 0.75rem; color: var(--muted); border: 1px solid var(--line);
+  padding: 0.2rem 0.5rem; border-radius: 6px;
+}
+.evidence {
+  display: grid; grid-template-columns: minmax(200px, 320px) 1fr;
+  gap: 1rem; margin-top: 1rem;
+}
+@media (max-width: 700px) {
+  .evidence { grid-template-columns: 1fr; }
+}
+.photo-frame {
+  margin: 0; border-radius: 10px; overflow: hidden;
+  border: 1px solid var(--line); background: #000;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+}
+.photo-frame img {
+  display: block; width: 100%; aspect-ratio: 3/4; object-fit: cover;
+  filter: contrast(1.05) saturate(1.08);
+}
+.photo-frame figcaption {
+  padding: 0.45rem 0.65rem; font-size: 0.75rem; color: var(--muted);
+  background: #0e131a;
+}
+.docs pre {
+  white-space: pre-wrap; background: #0e131a; border: 1px solid var(--line);
+  border-radius: 8px; padding: 0.75rem; font-size: 0.85rem; line-height: 1.55;
+  color: #d5deea;
+}
+#anomalies { margin: 0.75rem 0 0; padding-right: 1.1rem; color: #f0d4a8; font-size: 0.9rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1rem; }
+.mono { font-family: ui-monospace, monospace; font-size: 0.85rem; color: var(--muted); }
+.foot {
+  max-width: 1100px; margin: 0 auto; padding: 0.75rem 1.25rem 1.5rem;
+  display: flex; justify-content: space-between; color: var(--muted); font-size: 0.75rem;
+}
+#login-echo.dup { color: #f0b4bb; }

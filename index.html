@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a2332" />
+  <meta name="description" content="سجل القرين — بوابة الاستمرارية البلدية. محتوى للبالغين 18+." />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icons/icon-192.png" />
+  <link rel="stylesheet" href="/css/app.css" />
+  <title>سجل الاستمرارية — شيفت ليلي</title>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="seal">◎</span>
+        <div>
+          <strong>بلدية الظلال</strong>
+          <small>سجل الاستمرارية · بوابة الموظف</small>
+        </div>
+      </div>
+      <div class="meta">
+        <span id="shift-label">شيفت ٠</span>
+        <span id="kpi">KPI: —</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="queue" aria-label="طابور القضايا">
+        <h2>القضايا المفتوحة</h2>
+        <ul id="case-list"></ul>
+        <p class="hint">كل قرار نهائي يُكتب في الدفتر الحي.</p>
+      </aside>
+
+      <section class="workspace" aria-live="polite">
+        <div id="gate" class="panel">
+          <p class="warning">١٨+ · صور واقعية وأزياء جريئة · رعب نفسي</p>
+          <h1>مكتب الاستمرارية</h1>
+          <p>الليلة عندك بلاغات عن «نُسَخ». قرّر من يبقى في القاعدة… ومن يُمحى بهدوء.</p>
+          <button id="btn-start" class="primary">بدء الشيفت</button>
+          <button id="btn-install" class="ghost hidden">تثبيت كتطبيق</button>
+        </div>
+
+        <div id="case-view" class="panel hidden">
+          <div class="case-head">
+            <h2 id="case-title">—</h2>
+            <span id="case-id" class="tag">—</span>
+          </div>
+          <div class="evidence">
+            <figure class="photo-frame">
+              <img id="case-photo" alt="دليل مصوّر من الملف" />
+              <figcaption id="photo-caption">مرفق مصوّر · جودة أرشيف</figcaption>
+            </figure>
+            <div class="docs">
+              <h3>الملف</h3>
+              <pre id="case-body"></pre>
+              <ul id="anomalies"></ul>
+            </div>
+          </div>
+          <div class="actions" id="actions">
+            <button data-action="confirm" class="act">تأكيد إنسان</button>
+            <button data-action="flag" class="act danger">وسم قرين</button>
+            <button data-action="merge" class="act">دمج السجلين</button>
+            <button data-action="quarantine" class="act warn">حجر الملف</button>
+          </div>
+        </div>
+
+        <div id="aftermath" class="panel hidden">
+          <h2>تحديث المدينة</h2>
+          <p id="aftermath-text"></p>
+          <button id="btn-next" class="primary">القضية التالية</button>
+        </div>
+
+        <div id="shift-end" class="panel hidden">
+          <h2>انتهى الشيفت</h2>
+          <p id="ending-text"></p>
+          <p id="ledger-summary" class="mono"></p>
+          <button id="btn-restart" class="primary">إعادة الشيفت</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span> Continuity Registry v0 · Prototype</span>
+      <span id="login-echo">موظف: ر.ظ — جلسة واحدة</span>
+    </footer>
+  </div>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
