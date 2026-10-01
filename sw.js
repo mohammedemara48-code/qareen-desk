@@ -6,8 +6,14 @@ const ASSETS = [
   "/js/app.js",
   "/js/audio.js",
   "/data/cases.js",
+  "/data/shift.js",
+  "/data/cases-p0.js",
+  "/data/cases-p1.js",
+  "/data/cases-p2.js",
+  "/data/cases-p3.js",
+  "/data/cases-p4.js",
   "/manifest.webmanifest",
-  "/icons/icon.svg",
+  "/icons/icon.svg"
 ];
 
 self.addEventListener("install", (event) => {
