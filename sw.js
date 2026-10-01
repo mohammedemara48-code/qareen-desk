@@ -1,11 +1,13 @@
-const CACHE = "qareen-desk-v0";
+const CACHE = "qareen-desk-v1";
 const ASSETS = [
   "/",
   "/index.html",
   "/css/app.css",
   "/js/app.js",
+  "/js/audio.js",
   "/data/cases.js",
   "/manifest.webmanifest",
+  "/icons/icon.svg",
 ];
 
 self.addEventListener("install", (event) => {
