@@ -1,10 +1,15 @@
-const CACHE = "qareen-desk-v1";
+const CACHE = "qareen-desk-v2";
 const ASSETS = [
   "/",
   "/index.html",
   "/css/app.css",
   "/css/desk-extra.css",
+  "/css/app-chrome-a.css",
+  "/css/app-chrome-b.css",
   "/js/app.js",
+  "/js/chunk-0.js",
+  "/js/chunk-1.js",
+  "/js/chunk-2.js",
   "/js/audio.js",
   "/data/cases.js",
   "/data/shift.js",
